@@ -9,7 +9,7 @@ const Layout = (props: Props) => {
         
             <main>
                 <Container className="d-flex flex-column">
-                <Row><Navbar/></Row>
+                <Row><h1>Insertar aqui la NAVBAR </h1></Row>
                 <Row><Outlet/></Row>
                 </Container>
             </main>
