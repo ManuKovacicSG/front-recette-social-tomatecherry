@@ -44,6 +44,9 @@
     ]
   },
   "devDependencies": {
-    "@types/video-react": "^0.15.1"
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@types/video-react": "^0.15.1",
+    "postcss-preset-env": "^8.0.1",
+    "tailwindcss": "^3.2.6"
   }
 }
