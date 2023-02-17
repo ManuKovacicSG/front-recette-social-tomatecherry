@@ -5,10 +5,10 @@ type Props = {}
 const BonAppetitButton = (props: Props) => {
   return (
     <>
-      <button className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full">
-  Button
-</button>
-</>
+      <button className='bg-[#00C27A] text-black font-extrabold mt-6 text-2xl h-12 w-64 rounded-full'>
+        Bon appetit
+      </button>
+    </>
   )
 }
 

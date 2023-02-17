@@ -1,16 +1,20 @@
 import React from 'react'
-import styles from './Homepage.module.css'
 import BonAppetitButton from '../../components/BonAppetitButton'
-
+import video from '../../Assets/video/video.mp4'
+import styles from './Homepage.module.css'
 
 type Props = {}
 
 const Homepage = (props: Props) => {
   return (
-    <div className={styles.body}>
-      <BonAppetitButton />
-    </div>
-  )
+
+      <body className={styles.home}>
+        <video className={styles.video} src={video} autoPlay/>
+        <section className={styles.button}>
+          <BonAppetitButton />
+        </section>
+      </body>
+  );
 }
 
 export default Homepage
