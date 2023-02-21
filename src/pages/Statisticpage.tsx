@@ -7,18 +7,43 @@ type Props = {};
 
 const Statisticpage = (props: Props) => {
   return (
-    <div className="max-w-sm mx-auto bg-[#171E2B] rounded-lg overflow-hidden">
+    <>
+    <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-4">
   <div className="sm:flex sm:items-center px-6 py-4">
-    <img className="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full" src={trendup} alt="trend-up"/>
-    <div className="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-      <p className="text-xl leading-tight">Erin Lindford</p>
-      <p className="text-sm leading-tight text-gray-600">Product Engineer</p>
+    <img className="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full" src={favoritechart} alt="trend-up"/>
+    <div className="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left text-white p-3">
+      <p className="text-2xl font-bold">Recetas mas votadas</p>
+      <p className="text-sm leading-tight font-thin ">Sigue nuestra sencilla receta para preparar esta rica paella, ¡incluso si nunca habías preparado una!</p>
       <div className="mt-4">
-        <button className="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Message</button>
       </div>
     </div>
   </div>
 </div>
+ 
+    <div className="max-w-sm mx-3 my-4 bg-[#171E2B] rounded-lg overflow-hidden ">
+  <div className="sm:flex sm:items-center px-6 py-4">
+    <img className="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24" src={trendup} alt="trend-up"/>
+    <div className="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left text-white p-3">
+      <p className="text-2xl font-bold">Tus estadísticas</p>
+      <p className="text-sm leading-tight font-thin ">Sigue nuestra sencilla receta para preparar esta rica paella, ¡incluso si nunca habías preparado una!</p>
+      <div className="mt-4">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="flex flex-row mx-3 my-4 rounded-xl bg-[#171E2B] max-w-sm">
+  <div className="" >
+    <img src={vector} alt="trend-up" className="block object-center basis-1/4"/>
+    </div>
+  <div className="max-w-sm basis-3/4 text-center bg-gray-400 px-4 py-2 m-2">
+  <p className="text-2xl font-bold">Chefs en tendencia</p>
+      <p className="text-sm leading-tight font-thin ">Sigue nuestra sencilla receta para preparar esta rica paella, ¡incluso si nunca habías preparado una!</p>
+  </div>
+
+</div>
+
+</>
   );
 };
 
