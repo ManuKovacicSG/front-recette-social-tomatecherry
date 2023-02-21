@@ -1,11 +1,11 @@
 import React from "react";
-import favoritechart from "../Assets/favoritechart.png";
-import vector from "../Assets/Vector.png";
-import trendup from "../Assets/trendup.png";
+import favoritechart from "../../assets/favoritechart.png";
+import vector from "../../assets/Vector.png";
+import trendup from "../../assets/trendup.png";
 
 type Props = {};
 
-const Statisticpage = (props: Props) => {
+const Statistic = (props: Props) => {
   return (
     <>
     <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-4">
@@ -47,4 +47,4 @@ const Statisticpage = (props: Props) => {
   );
 };
 
-export default Statisticpage;
+export default Statistic;

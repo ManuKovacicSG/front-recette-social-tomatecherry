@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from '../../components/Button'
-import video from '../../Assets/video/video.mp4'
-import styles from './Homepage.module.css'
+import Button from '../Home/Button'
+import video from '../../assets/video-home-page.mp4'
+import styles from './Home.module.css'
 
 type Props = {}
 
-const Homepage = (props: Props) => {
+const Home = (props: Props) => {
   return (
       <body className={styles.home}>
         <video className={styles.video} src={video} autoPlay/>
@@ -16,4 +16,4 @@ const Homepage = (props: Props) => {
   );
 }
 
-export default Homepage
+export default Home

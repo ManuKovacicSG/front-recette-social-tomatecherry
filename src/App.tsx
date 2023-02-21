@@ -1,8 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 import Layout from "./components/Layout";
-import Homepage from "../src/pages/homepage/Homepage";
-import Socialpage from "./pages/Socialpage"
-import Statisticpage from "./pages/Statisticpage"
+import Homepage from "./pages/Home/Home";
+import Socialpage from "./pages/Social/Social"
+import Statisticpage from "./pages/Statistic/Statistic"
 import "../src/styles/tailwind.css";
 
 function App() {
