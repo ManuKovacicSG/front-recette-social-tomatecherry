@@ -7,12 +7,12 @@ type Props = {}
 
 const Home = (props: Props) => {
   return (
-      <body className={styles.home}>
+      <div className={styles.home}>
         <video className={styles.video} src={video} autoPlay/>
         <section className={styles.button}>
           <Button />
         </section>
-      </body>
+      </div>
   );
 }
 

@@ -5,7 +5,7 @@ type Props = {}
 
 const Login = (props: Props) => {
   return (
-    <body>
+    <div>
       <section className='flex flex-cols-3 gap-2 justify-center mt-16'>
         <p className='text-white font-normal'>tomate</p>
         <img src={logo} alt='logo'></img>
@@ -23,7 +23,7 @@ const Login = (props: Props) => {
         <p className='text-white font-normal text-lg'>do you already have an account?</p>
         <button className=' text-regal-green font-normal text-lg'>log in</button>
       </section>
-    </body>
+    </div>
   )
 }
 
