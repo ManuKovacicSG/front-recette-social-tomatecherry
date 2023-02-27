@@ -2,12 +2,15 @@ import React from "react";
 import favoritechart from "../../assets/favoritechart.png";
 import vector from "../../assets/Vector.png";
 import trendup from "../../assets/trendup.png";
+import style from './Statistic.module.css'
 
 type Props = {};
 
 const Statistic = (props: Props) => {
   return (
     <>
+    <body className={style.statistic}>
+      
     <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-4">
   <div className="sm:flex sm:items-center px-6 py-4">
     <img className="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full" src={favoritechart} alt="trend-up"/>
@@ -43,8 +46,11 @@ const Statistic = (props: Props) => {
 
 </div>
 
+    </body>
 </>
   );
 };
 
 export default Statistic;
+
+
