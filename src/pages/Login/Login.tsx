@@ -30,7 +30,7 @@ const Login = (props: Props) => {
         <p className='text-white font-normal text-lg'>do you already have an account?</p>
         <button className=' text-regal-green font-normal text-lg'>Log in</button>
       </section>
-    </div>
+    </body>
   )
 }
 
