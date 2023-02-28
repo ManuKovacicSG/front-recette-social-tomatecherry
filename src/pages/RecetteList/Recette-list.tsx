@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/tomate-logo.svg';
 import cachapa from '../../assets/cachapa.svg'
-import Navbar from '../../components/Navbar';
+import PrimaryNavbar from '../../components/PrimaryNavbar';
 
 function RecetteList() {
   return (
@@ -68,7 +68,7 @@ function RecetteList() {
             </div>
           </div>
         </div>
-        <Navbar/>
+        <PrimaryNavbar/>
         </>
   )
 }
