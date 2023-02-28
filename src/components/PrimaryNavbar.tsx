@@ -26,7 +26,7 @@ const PrimaryNavbar = (props: Props) => {
           <img src={createIcon} alt="Create Icon" className="w-6 h-6" />
           Create
         </Link>
-        <Link to="/recipes" className="flex flex-col items-center text-gray-600 hover:text-gray-800 font-medium">
+        <Link to="/recette-list" className="flex flex-col items-center text-gray-600 hover:text-gray-800 font-medium">
           <img src={recipesIcon} alt="Recipes Icon" className="w-6 h-6" />
           Recipes
         </Link>
