@@ -3,12 +3,15 @@ import favoritechart from "../../assets/favoritechart.png";
 import vector from "../../assets/Vector.png";
 import trendup from "../../assets/trendup.png";
 import style from './Statistic.module.css'
+import PrimaryNavbar from '../../components/PrimaryNavbar'
+import SecondaryNavbar from "../../components/SecondaryNavbar";
 
 type Props = {};
 
 const Statistic = (props: Props) => {
   return (
     <>
+    <SecondaryNavbar />
     <body className={style.statistic}>
       
     <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-4">
@@ -46,6 +49,7 @@ const Statistic = (props: Props) => {
 
 </div>
 
+<PrimaryNavbar />
     </body>
 </>
   );
