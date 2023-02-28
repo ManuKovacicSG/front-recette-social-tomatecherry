@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 
 function RecetteList() {
   return (
+
     <>
     <div className='text-white' >
  <img src={logo} alt='logo'></img>
@@ -13,7 +14,7 @@ function RecetteList() {
         <h1>What do you want to eat today?</h1>
         </div>
         <div>
-            <input type="text" placeholder='Search' />
+            <input type="search" placeholder='Search' />
             <br />
             <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Recipes top</button>
             <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Recommended</button>
@@ -28,7 +29,7 @@ function RecetteList() {
               alt="trend-up"
             />
             <div className="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left text-white p-3">
-              <p className="text-2xl font-bold">Cachapa</p>
+              <p className="text-2xl font-bold">{id}</p>
               <p className="text-sm leading-tight font-thin ">
               Esta receta de cachapas venezolanas caseras con queso son irresistibles, una combinación de sabores dulces y salados
               </p>
