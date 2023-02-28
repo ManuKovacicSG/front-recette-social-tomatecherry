@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 // import apiService from '../api/apiService'
 
-// type Props = {}
+type Props = {}
 
-// const RecipeCard = (props: Props) => {
-//     const [ recipe, setRecipe ] = useState([]);
+const RecipeCard = (props: Props) => {
+    const [ recipe, setRecipe ] = useState([]);
     
-// useEffect(())
+// useEffect()
 
 
-//   return (
-//     <div>RecipeCard</div>
-//   )
-// }
+  return (
+    <div>RecipeCard</div>
+  )
+}
 
-// export default RecipeCard
+export default RecipeCard
