@@ -57,8 +57,10 @@ const RecetteList = (props: Props) => {
             <p className="m-2 text-sm leading-tight font-light text-white ">Sigue nuestra sencilla receta para preparar esta rica paella, ¡incluso si nunca habías preparado una!</p>
           </div>
         </div>
-        <Navbar/>
-        </>
+       </div> 
+      </section>
+      <PrimaryNavbar/>
+    </body>
   )
 }
 
