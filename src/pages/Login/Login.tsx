@@ -28,7 +28,7 @@ const Login = (props: Props) => {
       </section>
       <section className='grid grid-rows-2 gap-1 ml-14 mr-14 mt-24 justify-center'>
         <p className='text-white font-normal text-lg'>do you already have an account?</p>
-        <button className=' text-regal-green font-normal text-lg'>log in</button>
+        <button className=' text-regal-green font-normal text-lg'>Log in</button>
       </section>
     </div>
   )
