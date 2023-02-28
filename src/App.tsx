@@ -21,8 +21,6 @@ function App() {
         <Route path="/recette-list" element={<RecetteList />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/recipeform" element={<RecipeForm />} />
-
-
       </Route>
     </Routes>
     </>
