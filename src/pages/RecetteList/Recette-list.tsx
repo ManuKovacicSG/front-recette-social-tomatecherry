@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/tomate-logo.svg';
 import cachapa from '../../assets/cachapa.svg'
-import Navbar from '../../components/Navbar';
+import PrimaryNavbar from '../../components/PrimaryNavbar';
 
 type Props = {}
 
@@ -57,10 +57,8 @@ const RecetteList = (props: Props) => {
             <p className="m-2 text-sm leading-tight font-light text-white ">Sigue nuestra sencilla receta para preparar esta rica paella, ¡incluso si nunca habías preparado una!</p>
           </div>
         </div>
-      </div>
-    </section>
-    <Navbar />
-  </body>
+        <Navbar/>
+        </>
   )
 }
 
