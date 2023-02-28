@@ -64,7 +64,6 @@ function RecetteList() {
               <p className="text-sm leading-tight font-thin ">
               Esta receta de cachapas venezolanas caseras con queso son irresistibles, una combinación de sabores dulces y salados
               </p>
-              <div className="mt-4"></div>
             </div>
           </div>
         </div>
