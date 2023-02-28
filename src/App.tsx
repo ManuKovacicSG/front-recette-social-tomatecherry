@@ -6,6 +6,7 @@ import Statisticpage from "./pages/Statistic/Statistic"
 import Login from "./pages/Login/Login"
 import "../src/styles/tailwind.css";
 import RecetteList from "./pages/RecetteList/Recette-list";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/statistic" element={<Statisticpage />} />
         <Route path="/recette-list" element={<RecetteList />} />
+        <Route path="/profile" element={<Profile />} />
+
       </Route>
     </Routes>
     </>

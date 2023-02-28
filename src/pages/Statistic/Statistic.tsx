@@ -3,6 +3,7 @@ import favoritechart from "../../assets/favoritechart.png";
 import vector from "../../assets/Vector.png";
 import trendup from "../../assets/trendup.png";
 import style from "./Statistic.module.css";
+import PrimaryNavbar from "../../components/PrimaryNavbar";
 
 type Props = {};
 
@@ -63,6 +64,7 @@ const Statistic = (props: Props) => {
           </div>
         </div>
       </body>
+      <PrimaryNavbar/>
     </>
   );
 };

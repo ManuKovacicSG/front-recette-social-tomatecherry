@@ -22,14 +22,14 @@ const Login = (props: Props) => {
           <button className='bg-[#FB2B3A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Create account</button>
         </article>
       </section>
-      <section className='grid grid-rows-2 gap-12 ml-14 mr-14 mt-20 justify-center'>
+      {/* <section className='grid grid-rows-2 gap-12 ml-14 mr-14 mt-20 justify-center'>
         <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Sign up </button>
         <button className='bg-[#FB2B3A] text-white font-extrabold text-lg rounded-full'>Create account</button>
       </section>
       <section className='grid grid-rows-2 gap-1 ml-14 mr-14 mt-24 justify-center'>
         <p className='text-white font-normal text-lg'>do you already have an account?</p>
         <button className=' text-regal-green font-normal text-lg'>Log in</button>
-      </section>
+      </section> */}
     </body>
   )
 }
