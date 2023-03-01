@@ -3,44 +3,43 @@ import logo from "../../assets/tomate-logo.svg";
 import cachapa from "../../assets/cachapa.svg";
 import PrimaryNavbar from "../../components/PrimaryNavbar";
 import { useParams } from "react-router-dom";
-import appServices from '../../apiServices/appservices'
-import RecipeCard from "../../components/RecipeCard";
+import appServices from "../../apiServices/appservices";
 
 type Props = {};
 
 export type Recipe = {
-  _id:string;
+  _id: string;
   title: string;
   description: string;
-}
+};
 
+const RecetteList = (props: Props) => {
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
 
-const RecetteList = (props: Props) => { 
-  const [recipe, setRecipe] = useState<Recipe>()
-
-  const params = useParams()
+  //const params = useParams()
 
   useEffect(() => {
     const loadRecipe = async () => {
-      if (params.id) {
-        const recipe = await appServices.getRecipeById(params.id)
-        console.log(recipe)
-        setRecipe(recipe)
-      }
-    }
-    loadRecipe()
-  }, [params.id])
-/*   let {id} = useParams();
-  let [recipe, setRecipe] = useState<Props[]>([])
-
-  useEffect(()=>{
-    appServices.getRecipeById(id).then((data)=> setRecipe(data));
-  }, []) */
+      //  if (params) {
+      const recipe = await appServices.getAllRecipes();
+      console.log(recipe);
+      setRecipes(recipe);
+      //}
+    };
+    loadRecipe();
+  }, []);
 
   return (
-    <body>
+    <>
+      {/* <div className="text-white">
+      {recipes?.map(recipe => (
+        <div key={recipe?._id}>
+          <h2>{recipe?.title}</h2>
+          <p>{recipe?.description}</p>
+        </div>
+      ))}
+    </div> */}
       <section>
-     
         <article className="p-8 flex flex-cols-3 gap-2 justify-center">
           <p className="text-white font-normal">tomate</p>
           <img src={logo} alt="logo"></img>
@@ -68,60 +67,35 @@ const RecetteList = (props: Props) => {
             Breakfast
           </button>
         </article>
-        <RecipeCard />
-        {/* <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3">
-          <div className="flex flex-cols-3 gap-2 p-2 justify-center">
-            <img
-              className=" m-4 block mx-auto h-24 rounded-full"
-              src={cachapa}
-              alt="trend-up"
-            />
-            <div className="">
-              <p className="m-2 text-2xl text-white font-bold">{recipe?.title}</p>
-              <p className="m-2 text-sm leading-tight font-light text-white ">
-                Esta receta de cachapas venezolanas caseras con queso son
-                irresistibles, una combinación de sabores dulces y salados
-              </p>
-            </div>
-          </div>
-        </div> */}
-        <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-1">
-          <div className="flex flex-cols-3 gap-2 p-2 justify-center">
-            <img
-              className=" m-4 block mx-auto h-24 rounded-full"
-              src={cachapa}
-              alt="trend-up"
-            />
-            <div className="">
+
+        <div >
+          {recipes?.map((recipe) => (
+            <div
+              key={recipe?._id}
+              className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-1  text-white"
+            ><div className="flex flex-cols-3 gap-2 p-2 justify-center">
+              <img
+                className=" m-4 block mx-auto h-24 rounded-full"
+                src={cachapa}
+                alt="trend-up"
+              />
+              <div>
               <p className="m-2 text-2xl text-white font-bold">
-                Arrollado de papa
+                {recipe?.title}
               </p>
-              <p className="m-2 text-sm leading-tight font-light text-white ">
-                Sigue nuestra sencilla receta para preparar esta rica paella,
-                ¡incluso si nunca habías preparado una!
-              </p>
+              <p>{recipe?.description}</p>
             </div>
-          </div>
-        </div>
-        <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-1">
-          <div className="flex flex-cols-3 gap-2 p-2 justify-center">
-            <img
-              className=" m-4 block mx-auto h-24 rounded-full"
-              src={cachapa}
-              alt="trend-up"
-            />
-            <div className="">
-              <p className="m-2 text-2xl text-white font-bold">Paella</p>
-              <p className="m-2 text-sm leading-tight font-light text-white ">
-                Sigue nuestra sencilla receta para preparar esta rica paella,
-                ¡incluso si nunca habías preparado una!
-              </p>
             </div>
-          </div>
+            </div>
+          ))}
         </div>
+
+        
+        
+        
       </section>
       <PrimaryNavbar />
-    </body>
+    </>
   );
 };
 
