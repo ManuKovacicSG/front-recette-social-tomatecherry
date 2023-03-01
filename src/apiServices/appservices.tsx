@@ -3,17 +3,24 @@ import axios from "axios";
 const apiBase = 'http://localhost:4000/api/v1'
 
 const appServices = {
-    getAllRecipes(){
-        return axios.get(apiBase + `/recipes`).then((res) => res.data())
+    async getAllRecipes(){
+
+        const res = await axios.get(apiBase + `/recipes`);
+        return res.data;
     },
 
-    getRecipeById(_id:string){
-        return axios.get(apiBase + `/recipes/recipe/${_id}`).then((res)=> (res.data));
+    async getRecipeById(_id:string){
+        const res = await axios.get(apiBase + `/recipes/recipe/${_id}`);
+        return res.data;
     },
 
-    deleteRecipeById(id:string){
-        return axios.delete(apiBase + `/recipes/${id}`).then((res)=>res.data)
-        .catch((err)=> console.log(err));
+    async deleteRecipeById(_id:string){
+        try {
+            const res = await axios.delete(apiBase + `/recipes/recipe/${_id}`);
+            return res.data;
+        } catch (err) {
+            return console.log(err);
+        }
     }
 }
 
