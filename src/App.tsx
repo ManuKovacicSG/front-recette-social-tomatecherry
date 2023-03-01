@@ -10,6 +10,7 @@ import Profile from "./pages/Profile/Profile";
 import RecipeForm from "./pages/RecipeForm/RecipeForm";
 import { FormEventHandler, useState } from "react";
 import { authService } from "./api/auth.service";
+import RecetteDetail from "./pages/RecetteList/RecetteDetail";
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/social" element={<Socialpage />} />
         <Route path="/auth/login" element={<Login handleSubmit ={handleSubmit}/>} />
         <Route path="/statistic" element={<Statisticpage />} />
+        <Route path="/recette-list/:id" element={<RecetteDetail />} />
         <Route path="/recette-list" element={<RecetteList />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/recipeform" element={<RecipeForm />} />
