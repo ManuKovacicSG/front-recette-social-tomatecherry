@@ -6,7 +6,7 @@ type User= {
 }
 
 export const authService = {
-    baseUrl:'http://localhost:4000/api/v1/auth/',
+    baseUrl:'http://localhost:3000/api/v1/auth/',
     login (user:User) {
         return axios.post(this.baseUrl.concat('login'), user)
     },
@@ -14,3 +14,4 @@ export const authService = {
         return axios.post(this.baseUrl.concat('register'), user)
     }
 }
+

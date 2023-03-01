@@ -14,10 +14,9 @@ import { authService } from "./api/auth.service";
 function App() {
 
   const navigate = useNavigate()
-  const [LoggedInUser, setLoggedInUser]=useState<string|null>(null);
+  const [LoggedInUser, setLoggedInUser]=useState<string|null>(null)
   const handleSubmit:FormEventHandler<HTMLFormElement> = async (e) => {
-    
-    e.preventDefault;
+    e.preventDefault();
     
     try {
       const result = await authService.login({
@@ -25,8 +24,10 @@ function App() {
         password: '1234'
       })
       console.log(result.data.access_token);
-      
-      localStorage.setItem ('token', result.data.acces_token)
+
+      const {access_token} = result.data;
+
+      localStorage.setItem ('token', access_token)
 
       setLoggedInUser(localStorage.getItem ('token'))
 
@@ -35,6 +36,12 @@ function App() {
     } catch (error) {
       console.log (error);
     }
+  }
+
+  const onLogOut = ()=>{
+    localStorage.removeItem('token')
+    setLoggedInUser(null)
+    navigate('/')
   }
 
   return (

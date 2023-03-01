@@ -1,4 +1,5 @@
 import React, { FormEventHandler } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/tomate-logo.svg'
 import styles from './Login.module.css'
 
@@ -7,7 +8,7 @@ type Props = {
   FormEventHandler<HTMLFormElement>
 }
 
-const Login = (props: Props) => {
+export const Login = (props: Props) => {
   const {handleSubmit} = props;
   return (
     <body>
@@ -22,7 +23,7 @@ const Login = (props: Props) => {
           <h2 className='text-white font-extrabold text-2xl'>y disfruta de las mejores recetas</h2>
         </article>
         <form onSubmit={handleSubmit} className='grid grid-rows-2 gap-8 ml-14 mr-14 justify-center'>
-          <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Log In</button>
+          <Link to="/statistic"><button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Log In</button></Link>
           <button className='bg-[#FB2B3A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Create account</button>
         </form>
       </section>
