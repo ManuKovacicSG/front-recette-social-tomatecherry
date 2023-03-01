@@ -8,7 +8,7 @@ const appServices = {
     },
 
     getRecipeById(_id:string){
-        return axios.get(apiBase + `/recipes/${_id}`).then((res)=> (res.data));
+        return axios.get(apiBase + `/recipes/recipe/${_id}`).then((res)=> (res.data));
     },
 
     deleteRecipeById(id:string){
