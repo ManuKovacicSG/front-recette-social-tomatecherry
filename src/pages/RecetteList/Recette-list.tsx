@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/tomate-logo.svg";
 import cachapa from "../../assets/cachapa.svg";
 import PrimaryNavbar from "../../components/PrimaryNavbar";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import appServices from "../../apiServices/appservices";
 
 type Props = {};
@@ -68,10 +68,8 @@ const RecetteList = (props: Props) => {
           </button>
         </article>
 
-        <div>
-        
+        <div >
           {recipes?.map((recipe) => (
-        
             <div
               key={recipe?._id}
               className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-1  text-white"
@@ -97,6 +95,10 @@ const RecetteList = (props: Props) => {
             </div>
           ))}
         </div>
+
+        
+        
+        
       </section>
       <PrimaryNavbar />
     </>

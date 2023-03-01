@@ -39,6 +39,22 @@ const RecetteDetail = () => {
     </article>
     <RecipeCard />
 
+    {/* <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3">
+      <div className="flex flex-cols-3 gap-2 p-2 justify-center">
+        <img
+          className=" m-4 block mx-auto h-24 rounded-full"
+          src={cachapa}
+          alt="trend-up"
+        />
+        <div className="">
+          <p className="m-2 text-2xl text-white font-bold">{recipe?.title}</p>
+          <p className="m-2 text-sm leading-tight font-light text-white ">
+            Esta receta de cachapas venezolanas caseras con queso son
+            irresistibles, una combinación de sabores dulces y salados
+          </p>
+        </div>
+      </div>
+    </div> */}
     
     <PrimaryNavbar />
   </section>
