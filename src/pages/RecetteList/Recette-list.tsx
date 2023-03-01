@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/tomate-logo.svg";
 import cachapa from "../../assets/cachapa.svg";
 import PrimaryNavbar from "../../components/PrimaryNavbar";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import appServices from "../../apiServices/appservices";
 
 type Props = {};
@@ -68,31 +68,35 @@ const RecetteList = (props: Props) => {
           </button>
         </article>
 
-        <div >
+        <div>
+        
           {recipes?.map((recipe) => (
+        
             <div
               key={recipe?._id}
               className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3 my-1  text-white"
-            ><div className="flex flex-cols-3 gap-2 p-2 justify-center">
-              <img
-                className=" m-4 block mx-auto h-24 rounded-full"
-                src={cachapa}
-                alt="trend-up"
-              />
-              <div>
-              <p className="m-2 text-2xl text-white font-bold">
-                {recipe?.title}
-              </p>
-              <p>{recipe?.description}</p>
-            </div>
-            </div>
+            >
+             
+              <div className="flex flex-cols-3 gap-2 p-2 justify-center">
+                <img
+                  className=" m-4 block mx-auto h-24 rounded-full"
+                  src={cachapa}
+                  alt="trend-up"
+                />
+              
+                <div>
+                  <a href={recipe?._id}>
+                  <p className="m-2 text-2xl text-white font-bold">
+                    {recipe?.title}
+                  </p>
+                  </a>
+                  <p>{recipe?.description}</p>
+                </div>
+              </div>
+             
             </div>
           ))}
         </div>
-
-        
-        
-        
       </section>
       <PrimaryNavbar />
     </>

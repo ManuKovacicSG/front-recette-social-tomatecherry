@@ -30,7 +30,7 @@ const RecipeCard = (props: Props) => {
     }, [params.id])
     
   return (
-    <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3">
+    <div className="max-w-sm max-h-44 bg-[#171E2B] rounded-lg overflow-hidden mx-3" >
     <div className="flex flex-cols-3 gap-2 p-2 justify-center">
       <img
         className=" m-4 block mx-auto h-24 rounded-full"
