@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { FormEventHandler } from 'react'
 import logo from '../../assets/tomate-logo.svg'
 import styles from './Login.module.css'
 
-type Props = {}
+type Props = {
+  handleSubmit:
+  FormEventHandler<HTMLFormElement>
+}
 
 const Login = (props: Props) => {
+  const {handleSubmit} = props;
   return (
     <body>
       <section className={styles.login}>
@@ -17,10 +21,10 @@ const Login = (props: Props) => {
           <h1 className='text-white font-extrabold text-3xl'>¡Únete a nuestra comunidad!</h1>
           <h2 className='text-white font-extrabold text-2xl'>y disfruta de las mejores recetas</h2>
         </article>
-        <article className='grid grid-rows-2 gap-8 ml-14 mr-14 justify-center'>
+        <form onSubmit={handleSubmit} className='grid grid-rows-2 gap-8 ml-14 mr-14 justify-center'>
           <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Log In</button>
           <button className='bg-[#FB2B3A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Create account</button>
-        </article>
+        </form>
       </section>
       {/* <section className='grid grid-rows-2 gap-12 ml-14 mr-14 mt-20 justify-center'>
         <button className='bg-[#00C27A] text-white font-extrabold text-lg h-11 w-72 rounded-full'>Sign up </button>
