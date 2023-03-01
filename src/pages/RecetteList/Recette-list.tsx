@@ -85,7 +85,7 @@ const RecetteList = (props: Props) => {
                 />
               
                 <div>
-                  <a href={recipe?._id}>
+                  <a href={`/recette-list/${recipe._id}`}>
                   <p className="m-2 text-2xl text-white font-bold">
                     {recipe?.title}
                   </p>
