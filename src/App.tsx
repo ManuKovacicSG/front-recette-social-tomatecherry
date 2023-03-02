@@ -11,6 +11,7 @@ import RecipeForm from "./pages/RecipeForm/RecipeForm";
 import { FormEventHandler, useState } from "react";
 import { authService } from "./api/auth.service";
 import RecetteDetail from "./pages/RecetteList/RecetteDetail";
+import LoginForm from "./pages/Login/LoginForm";
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/recette-list" element={<RecetteList />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/recipeform" element={<RecipeForm />} />
+        <Route path="/register-form" element={<LoginForm />} />
       </Route>
     </Routes>
     </>

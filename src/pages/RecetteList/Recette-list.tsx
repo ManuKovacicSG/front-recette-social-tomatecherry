@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/tomate-logo.svg";
 import cachapa from "../../assets/cachapa.svg";
 import PrimaryNavbar from "../../components/PrimaryNavbar";
-import { useParams } from "react-router-dom";
 import appServices from "../../apiServices/appservices";
 
 type Props = {};
@@ -16,29 +15,17 @@ export type Recipe = {
 const RecetteList = (props: Props) => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
-  //const params = useParams()
-
   useEffect(() => {
     const loadRecipe = async () => {
-      //  if (params) {
       const recipe = await appServices.getAllRecipes();
       console.log(recipe);
       setRecipes(recipe);
-      //}
     };
     loadRecipe();
   }, []);
 
   return (
     <>
-      {/* <div className="text-white">
-      {recipes?.map(recipe => (
-        <div key={recipe?._id}>
-          <h2>{recipe?.title}</h2>
-          <p>{recipe?.description}</p>
-        </div>
-      ))}
-    </div> */}
       <section>
         <article className="p-8 flex flex-cols-3 gap-2 justify-center">
           <p className="text-white font-normal">tomate</p>
